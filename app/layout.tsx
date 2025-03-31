@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const jostSans = Jost({
   variable: '--font-jost-sans',
@@ -20,7 +22,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jostSans.variable} antialiased`}>
-        <main className="min-h-screen grid place-items-center bg-slate-800 text-white">{children}</main>
+        <div className="min-h-screen grid grid-rows-[1fr_auto]">
+          <div className="max-w-6xl mx-auto px-6 w-full">
+            <div className="py-16">
+              <Header />
+            </div>
+            <main>{children}</main>
+          </div>
+          <div>
+            <div className="max-w-6xl mx-auto px-6 w-full">
+              <div className="h-[292px] bg-primary rounded-lg z-10 relative"></div>
+            </div>
+            <div className="bg-foreground -mt-20 pt-36 pb-16">
+              <div className="max-w-6xl mx-auto px-6 w-full">
+                <Footer />
+              </div>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
