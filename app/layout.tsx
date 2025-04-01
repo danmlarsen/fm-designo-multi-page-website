@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import GetInTouch from './get-in-touch';
 
 const jostSans = Jost({
   variable: '--font-jost-sans',
@@ -31,7 +32,7 @@ export default function RootLayout({
           </div>
           <div>
             <div className="max-w-6xl mx-auto px-6 w-full">
-              <div className="h-[292px] bg-primary rounded-lg z-10 relative"></div>
+              <GetInTouch />
             </div>
             <div className="bg-foreground -mt-20 pt-36 pb-16">
               <div className="max-w-6xl mx-auto px-6 w-full">

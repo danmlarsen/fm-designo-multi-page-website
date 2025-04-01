@@ -1,4 +1,5 @@
 import Header from './header';
+import Socials from './socials';
 
 export default function Footer() {
   return (
@@ -15,7 +16,9 @@ export default function Footer() {
           <p>P : +1 253-863-8967</p>
           <p>M : contact@designo.co</p>
         </div>
-        <div className="flex justify-end items-end">socials</div>
+        <div className="flex justify-end items-end">
+          <Socials />
+        </div>
       </div>
     </footer>
   );
