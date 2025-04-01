@@ -1,3 +1,11 @@
+import Designs from './designs';
+import HeroAwardWinning from './hero-award-winning';
+
 export default function HomePage() {
-  return <h1 className="text-5xl font-bold">Home page</h1>;
+  return (
+    <div className="space-y-40">
+      <HeroAwardWinning />
+      <Designs />
+    </div>
+  );
 }
