@@ -6,7 +6,6 @@ import Footer from '@/components/footer';
 import GetInTouch from './get-in-touch';
 
 const jostSans = Jost({
-  variable: '--font-jost-sans',
   subsets: ['latin'],
 });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jostSans.variable} antialiased`}>
+      <body className={`${jostSans.className} antialiased`}>
         <div className="min-h-screen grid grid-rows-[1fr_auto]">
           <div className="max-w-6xl mx-auto px-6 w-full">
             <div className="py-16">
@@ -30,7 +29,7 @@ export default function RootLayout({
             </div>
             <main>{children}</main>
           </div>
-          <div>
+          <div className="mt-40">
             <div className="max-w-6xl mx-auto px-6 w-full">
               <GetInTouch />
             </div>

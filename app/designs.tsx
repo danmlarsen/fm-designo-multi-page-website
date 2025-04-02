@@ -25,11 +25,11 @@ const designLinks = [
 
 export default function Designs() {
   return (
-    <div className="grid grid-cols-2 gap-x-8 gap-y-6 min-h-[640px]">
+    <section className="grid grid-cols-2 gap-x-8 gap-y-6 min-h-[640px]">
       {designLinks.map((item, index) => (
         <DesignItem key={item.title} title={item.title} href={item.href} background={item.background} className={index === 0 ? 'row-span-2' : ''} />
       ))}
-    </div>
+    </section>
   );
 }
 
