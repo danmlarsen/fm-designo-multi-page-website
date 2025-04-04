@@ -1,3 +1,9 @@
+import Locations from './locations';
+
 export default function LocationsPage() {
-  return <div>locations page</div>;
+  return (
+    <>
+      <Locations />
+    </>
+  );
 }
