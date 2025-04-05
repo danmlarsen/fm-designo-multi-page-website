@@ -12,8 +12,12 @@ export default function HomePage() {
       <Image src={SvgLeaf} alt="Leaf pattern" className="absolute top-[1879px] right-0 rotate-180 -z-50" />
       <div className="space-y-40">
         <HeroAwardWinning />
-        <Designs />
-        <BulletpointIllustrations />
+        <div className="px-6">
+          <Designs />
+        </div>
+        <div className="px-6">
+          <BulletpointIllustrations />
+        </div>
       </div>
     </>
   );

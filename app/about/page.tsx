@@ -5,10 +5,12 @@ import TheRealDeal from './the-real-deal';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-40">
+    <div className="lg:space-y-40">
       <HeroAboutUs />
       <Talent />
-      <LocationSection />
+      <div className="my-32 md:my-auto">
+        <LocationSection />
+      </div>
       <TheRealDeal />
     </div>
   );

@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const pages = [
@@ -15,10 +16,10 @@ const pages = [
   },
 ];
 
-export default function Navigation() {
+export default function Navigation({ className }: React.ComponentProps<'nav'>) {
   return (
-    <nav>
-      <ul className="flex gap-10 uppercase text-sm tracking-wider">
+    <nav className={cn('', className)}>
+      <ul className="flex flex-col md:flex-row gap-10 items-center uppercase text-sm tracking-wider">
         {pages.map(page => (
           <li key={page.href}>
             <Link href={page.href}>{page.title}</Link>

@@ -23,9 +23,9 @@ const items = [
 
 export default function BulletpointIllustrations() {
   return (
-    <section className="grid grid-cols-3 gap-8 text-center">
+    <section className="grid lg:grid-cols-3 gap-8 text-center md:text-left lg:text-center">
       {items.map(item => (
-        <div key={item.heading} className="flex flex-col items-center gap-12">
+        <div key={item.heading} className="grid md:grid-cols-[202px_1fr] lg:grid-cols-1 items-center justify-items-center gap-12">
           <div className="bg-secondary rounded-full">
             <Image src={item.illustration} alt={item.heading} />
           </div>

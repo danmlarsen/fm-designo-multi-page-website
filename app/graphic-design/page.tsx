@@ -18,26 +18,28 @@ export default function GraphicDesignPage() {
 tailored to meet your business objectives."
         pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute -top-42 left-0" />}
       />
-      <DesignProjects
-        projects={[
-          {
-            title: 'Tim Brown',
-            description: 'A book cover designed for Tim Brown’s new release, ‘Change’',
-            image: ImageChange,
-          },
-          {
-            title: 'Boxed water',
-            description: 'A simple packaging concept made for Boxed Water',
-            image: ImageBoxedWater,
-          },
-          {
-            title: 'Science!',
-            description: 'A poster made in collaboration with the Federal Art Project',
-            image: ImageScience,
-          },
-        ]}
-      />
-      <Designs />
+      <div className="px-6 md:px-10">
+        <DesignProjects
+          projects={[
+            {
+              title: 'Tim Brown',
+              description: 'A book cover designed for Tim Brown’s new release, ‘Change’',
+              image: ImageChange,
+            },
+            {
+              title: 'Boxed water',
+              description: 'A simple packaging concept made for Boxed Water',
+              image: ImageBoxedWater,
+            },
+            {
+              title: 'Science!',
+              description: 'A poster made in collaboration with the Federal Art Project',
+              image: ImageScience,
+            },
+          ]}
+        />
+        <Designs />
+      </div>
     </div>
   );
 }

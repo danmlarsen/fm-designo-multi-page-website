@@ -25,7 +25,7 @@ const locations = [
 
 export default function LocationSection() {
   return (
-    <section className="grid grid-cols-3 gap-8 text-center">
+    <section className="grid lg:grid-cols-3 gap-8 text-center">
       {locations.map(location => (
         <div key={location.heading} className="flex flex-col items-center gap-12">
           <div className="bg-secondary rounded-full">

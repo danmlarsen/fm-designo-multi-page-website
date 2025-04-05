@@ -22,41 +22,43 @@ export default function WebdesignPage() {
 and bring memorable brand experiences."
         pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute -top-42 right-0" />}
       />
-      <DesignProjects
-        projects={[
-          {
-            title: 'Express',
-            description: 'A multi-carrier shipping website for ecommerce businesses',
-            image: ImageExpress,
-          },
-          {
-            title: 'Transfer',
-            description: 'Site for low-cost money transfers and sending money within seconds',
-            image: ImageTransfer,
-          },
-          {
-            title: 'Photon',
-            description: 'A state-of-the-art music player with high-resolution audio and DSP effects',
-            image: ImagePhoton,
-          },
-          {
-            title: 'Builder',
-            description: 'Connects users with local contractors based on their location',
-            image: ImageBuilder,
-          },
-          {
-            title: 'Blogr',
-            description: 'Blogr is a platform for creating an online blog or publication',
-            image: ImageBlogr,
-          },
-          {
-            title: 'Camp',
-            description: 'Get expert training in coding, data, design, and digital marketing',
-            image: ImageCamp,
-          },
-        ]}
-      />
-      <Designs />
+      <div className="px-6 md:px-10">
+        <DesignProjects
+          projects={[
+            {
+              title: 'Express',
+              description: 'A multi-carrier shipping website for ecommerce businesses',
+              image: ImageExpress,
+            },
+            {
+              title: 'Transfer',
+              description: 'Site for low-cost money transfers and sending money within seconds',
+              image: ImageTransfer,
+            },
+            {
+              title: 'Photon',
+              description: 'A state-of-the-art music player with high-resolution audio and DSP effects',
+              image: ImagePhoton,
+            },
+            {
+              title: 'Builder',
+              description: 'Connects users with local contractors based on their location',
+              image: ImageBuilder,
+            },
+            {
+              title: 'Blogr',
+              description: 'Blogr is a platform for creating an online blog or publication',
+              image: ImageBlogr,
+            },
+            {
+              title: 'Camp',
+              description: 'Get expert training in coding, data, design, and digital marketing',
+              image: ImageCamp,
+            },
+          ]}
+        />
+        <Designs />
+      </div>
     </div>
   );
 }
