@@ -9,17 +9,17 @@ const locations = [
   {
     image: ImageCanada,
     heading: 'Canada',
-    href: '/locations',
+    href: '/locations#canada',
   },
   {
     image: ImageAustralia,
     heading: 'Australia',
-    href: '/locations',
+    href: '/locations#australia',
   },
   {
     image: ImageUK,
     heading: 'United Kingdom',
-    href: '/locations',
+    href: '/locations#united-kingdom',
   },
 ];
 

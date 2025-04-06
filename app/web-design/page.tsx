@@ -2,6 +2,7 @@ import DesignHero from '@/components/design-hero';
 import Designs from '../designs';
 
 import SvgHeroPattern from '@/assets/web-design/desktop/bg-pattern-intro-web.svg';
+
 import Image from 'next/image';
 
 import DesignProjects from '@/components/design-projects';
@@ -20,7 +21,7 @@ export default function WebdesignPage() {
         title="Web Design"
         subtext="We build websites that serve as powerful marketing tools 
 and bring memorable brand experiences."
-        pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute -top-42 right-0" />}
+        pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute lg:-top-42 right-0" />}
       />
       <div className="px-6 md:px-10">
         <DesignProjects

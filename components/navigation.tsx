@@ -16,10 +16,10 @@ const pages = [
   },
 ];
 
-export default function Navigation({ className }: React.ComponentProps<'nav'>) {
+export default function Navigation({ className, ...props }: React.ComponentProps<'nav'>) {
   return (
-    <nav className={cn('', className)}>
-      <ul className="flex flex-col md:flex-row gap-10 items-center uppercase text-sm tracking-wider">
+    <nav className={cn('', className)} {...props}>
+      <ul className="flex flex-col md:flex-row gap-8 md:gap-10 md:items-center uppercase text-2xl md:text-sm tracking-wider">
         {pages.map(page => (
           <li key={page.href}>
             <Link href={page.href}>{page.title}</Link>
