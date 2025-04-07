@@ -15,14 +15,14 @@ export default function MobileNav() {
   return (
     <Drawer direction="top" open={isOpen} onOpenChange={open => setIsOpen(open)}>
       <DrawerTrigger asChild>
-        <Button>
+        <Button variant="ghost" className="md:hidden">
           {!isOpen && <Image src={IconHamburger} alt="Hamburger icon" />}
           {!!isOpen && <Image src={IconClose} alt="Close icon" />}
         </Button>
       </DrawerTrigger>
       <DrawerContent className="bg-black text-white px-6 py-12 data-[vaul-drawer-direction=top]:top-[120px] border-none data-[vaul-drawer-direction=top]:rounded-b-none">
         <DrawerTitle hidden={true}>Mobile Navigation</DrawerTitle>
-        <Navigation />
+        <Navigation className="gap-8 text-2xl items-start" />
       </DrawerContent>
     </Drawer>
   );

@@ -7,7 +7,9 @@ export default function Header({ className, mode = 'dark' }: React.ComponentProp
   return (
     <header className={cn('flex justify-between items-center', className, mode === 'light' && 'text-white')}>
       <Logo mode={mode} />
-      <Navigation className="hidden md:block" />
+      <div className="hidden md:block">
+        <Navigation />
+      </div>
       <MobileNav />
     </header>
   );
