@@ -28,7 +28,7 @@ export default function LocationSection() {
     <section className="grid lg:grid-cols-3 gap-8 text-center">
       {locations.map(location => (
         <div key={location.heading} className="flex flex-col items-center gap-12">
-          <div className="bg-secondary rounded-full">
+          <div className="bg-muted rounded-full">
             <Image src={location.image} alt={location.heading} />
           </div>
           <div>

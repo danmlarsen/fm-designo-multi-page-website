@@ -42,10 +42,10 @@ export default function Locations() {
           className="grid lg:grid-cols-[1fr_auto] md:gap-8 lg:h-[326px] relative"
         >
           <Image src={SvgPattern} alt="Background pattern" className="absolute bottom-0 left-0" />
-          <div className="w-full h-[326px] lg:w-[350px] lg:order-2 bg-secondary md:rounded-lg overflow-hidden grid place-items-center">
+          <div className="w-full h-[326px] lg:w-[350px] lg:order-2 bg-muted md:rounded-lg overflow-hidden grid place-items-center">
             <MapLocationCaller coords={location.coords} title={location.title} />
           </div>
-          <div className="bg-secondary rounded-lg px-20 grid lg:place-items-center py-20 md:py-24 lg:py-0 text-center md:text-left">
+          <div className="bg-muted rounded-lg px-20 grid lg:place-items-center py-20 md:py-24 lg:py-0 text-center md:text-left">
             <div className="space-y-6">
               <h2 className="text-primary font-medium text-5xl">{location.country}</h2>
               <div className="grid md:grid-cols-2 gap-8">

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Designs from './designs';
+import Designs from '../components/designs-section';
 import HeroAwardWinning from './hero-award-winning';
 
 import SvgLeaf from '@/assets/shared/desktop/bg-pattern-leaf.svg';

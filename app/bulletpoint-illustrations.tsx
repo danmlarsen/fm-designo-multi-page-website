@@ -26,7 +26,7 @@ export default function BulletpointIllustrations() {
     <section className="grid lg:grid-cols-3 gap-8 text-center md:text-left lg:text-center">
       {items.map(item => (
         <div key={item.heading} className="grid md:grid-cols-[202px_1fr] lg:grid-cols-1 items-center justify-items-center gap-12">
-          <div className="bg-secondary rounded-full">
+          <div className="bg-muted rounded-full">
             <Image src={item.illustration} alt={item.heading} />
           </div>
           <div className="space-y-8">

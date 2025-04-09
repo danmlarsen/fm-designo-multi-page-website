@@ -1,7 +1,7 @@
 import DesignHero from '@/components/design-hero';
 import SvgHeroPattern from '@/assets/app-design/desktop/bg-pattern-intro-app.svg';
 import Image from 'next/image';
-import Designs from '../designs';
+import Designs from '../../components/designs-section';
 import DesignProjects from '@/components/design-projects';
 
 import ImageAirfilter from '@/assets/app-design/desktop/image-airfilter.jpg';

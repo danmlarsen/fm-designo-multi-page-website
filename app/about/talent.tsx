@@ -7,10 +7,10 @@ import SvgPatternTwoCircles from '@/assets/shared/desktop/bg-pattern-two-circles
 
 export default function Talent() {
   return (
-    <section className="grid lg:grid-cols-[476px_1fr] bg-secondary md:rounded-lg overflow-hidden lg:h-[640px]">
+    <section className="grid lg:grid-cols-[476px_1fr] bg-muted md:rounded-lg overflow-hidden lg:h-[640px]">
       <div>
         <Image src={ImageTalentMobile} alt="World class talent" className="md:hidden object-cover w-full" />
-        <Image src={ImageTalentTablet} alt="World class talent" className="hidden lg:block object-cover w-full" />
+        <Image src={ImageTalentTablet} alt="World class talent" className="hidden md:block lg:hidden object-cover w-full" />
         <Image src={ImageTalent} alt="World class talent" className="hidden lg:block object-cover w-full" />
       </div>
       <div className="flex flex-col justify-center px-6 lg:px-24 space-y-6 relative py-20 lg:py-0 text-center lg:text-left">

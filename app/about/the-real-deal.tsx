@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function TheRealDeal() {
   return (
-    <section className="grid lg:grid-cols-[1fr_476px] bg-secondary lg:rounded-lg overflow-hidden lg:h-[640px]">
+    <section className="grid lg:grid-cols-[1fr_476px] bg-muted lg:rounded-lg overflow-hidden lg:h-[640px]">
       <div className="lg:order-2">
         <Image src={ImageRealDealMobile} alt="The Real Deal" className="md:hidden object-cover w-full" />
         <Image src={ImageRealDealTablet} alt="The Real Deal" className="hidden md:block lg:hidden object-cover w-full" />

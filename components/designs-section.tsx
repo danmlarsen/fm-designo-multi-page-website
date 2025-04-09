@@ -40,7 +40,7 @@ export default function Designs() {
             title={item.title}
             href={item.href}
             background={item.background}
-            className={designLinks.length > 2 && index === 0 ? 'row-span-2 lg:min-h-full' : ''}
+            className={pathname === '/' && index === 0 ? 'row-span-2 lg:h-full' : ''}
           />
         ))}
     </section>
@@ -50,7 +50,7 @@ export default function Designs() {
 function DesignItem({ title, href, background, className }: React.ComponentProps<'a'> & { title: string; href: string; background: StaticImageData }) {
   return (
     <Link href={href} className={cn('text-white', className)}>
-      <div className={cn(`grid place-items-center bg-cover rounded-lg h-[250px] relative bg-black/50 overflow-hidden`, className)}>
+      <div className={cn(`grid place-items-center bg-cover rounded-lg h-[200px] md:h-[308px] relative bg-black/50 overflow-hidden`, className)}>
         <Image src={background} alt={title} fill className="-z-10 object-cover" />
         <h3 className="text-5xl">{title}</h3>
       </div>

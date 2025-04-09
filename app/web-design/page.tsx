@@ -1,5 +1,5 @@
 import DesignHero from '@/components/design-hero';
-import Designs from '../designs';
+import Designs from '../../components/designs-section';
 
 import SvgHeroPattern from '@/assets/web-design/desktop/bg-pattern-intro-web.svg';
 

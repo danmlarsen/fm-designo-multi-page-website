@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jostSans.className} antialiased scroll-smooth`}>
-        <div className="min-h-screen grid grid-rows-[1fr_auto]">
+        <div className="min-h-screen grid grid-rows-[1fr_auto] mx-auto">
           <div className="max-w-6xl mx-auto w-full">
             <div className="flex flex-col justify-center h-24 md:py-16 px-6 md:px-10 sticky md:relative top-0 left-0 bg-white z-[60]">
               <Header />
