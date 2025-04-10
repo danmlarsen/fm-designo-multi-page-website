@@ -8,7 +8,7 @@ export default function AboutPage() {
     <div className="lg:space-y-40">
       <HeroAboutUs />
       <Talent />
-      <div className="my-32 md:my-auto">
+      <div className="my-32 md:my-40">
         <LocationSection />
       </div>
       <TheRealDeal />

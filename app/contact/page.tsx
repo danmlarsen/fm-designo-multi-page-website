@@ -7,7 +7,9 @@ export default function ContactPage() {
       <div className="md:px-10">
         <ContactUs />
       </div>
-      <LocationSection />
+      <div className="md:my-40">
+        <LocationSection />
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function WebdesignPage() {
 and bring memorable brand experiences."
         pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute lg:-top-42 right-0" />}
       />
-      <div className="px-6 md:px-10">
+      <div className="px-6 md:px-10 space-y-40">
         <DesignProjects
           projects={[
             {

@@ -97,7 +97,9 @@ export default function ContactForm() {
           />
 
           <div className="flex justify-end">
-            <Button type="submit">Submit</Button>
+            <Button type="submit" className="cursor-pointer">
+              Submit
+            </Button>
           </div>
         </fieldset>
       </form>

@@ -19,7 +19,7 @@ export default function AppDesignPage() {
  to your customers right at their fingertips."
         pattern={<Image src={SvgHeroPattern} alt="Background pattern" className="absolute -top-42 left-0" />}
       />
-      <div className="px-6 md:px-10">
+      <div className="px-6 md:px-10 space-y-40">
         <DesignProjects
           projects={[
             {
