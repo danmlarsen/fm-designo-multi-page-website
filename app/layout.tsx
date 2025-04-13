@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${jostSans.className} antialiased scroll-smooth`}>
         <div className="min-h-screen grid grid-rows-[1fr_auto] mx-auto">
           <div className="max-w-6xl mx-auto w-full">
-            <div className="flex flex-col justify-center h-24 md:py-16 px-6 md:px-10 sticky md:relative top-0 left-0 bg-white z-[60]">
+            <div className="flex flex-col justify-center h-24 md:py-16 px-6 md:px-10 sticky md:relative top-0 left-0 z-50 bg-white">
               <Header />
             </div>
             <main>{children}</main>
@@ -40,6 +40,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        <div id="mobile-menu-button-root" className="z-[1000000] h-screen" />
       </body>
     </html>
   );
