@@ -5,7 +5,7 @@ import TheRealDeal from './the-real-deal';
 
 export default function AboutPage() {
   return (
-    <div className="lg:space-y-40">
+    <div className="md:space-y-40 md:px-10">
       <HeroAboutUs />
       <Talent />
       <div className="my-32 md:my-40">

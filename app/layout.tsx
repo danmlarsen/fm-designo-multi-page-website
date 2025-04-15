@@ -40,7 +40,6 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        <div id="mobile-menu-button-root" className="z-[1000000] h-screen" />
       </body>
     </html>
   );

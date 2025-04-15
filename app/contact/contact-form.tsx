@@ -58,7 +58,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Input placeholder="Email" {...field} />
+                    <Input placeholder="Email Address" {...field} />
                     <FormMessage />
                   </div>
                 </FormControl>
@@ -96,8 +96,8 @@ export default function ContactForm() {
             )}
           />
 
-          <div className="flex justify-end">
-            <Button type="submit" className="cursor-pointer">
+          <div className="flex justify-center md:justify-end">
+            <Button type="submit" className="cursor-pointer ">
               Submit
             </Button>
           </div>

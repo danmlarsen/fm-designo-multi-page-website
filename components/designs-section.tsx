@@ -54,13 +54,13 @@ function DesignItem({ title, href, background, className }: React.ComponentProps
     <Link href={href} className={cn('text-white group', className)}>
       <div
         className={cn(
-          `grid place-items-center bg-cover rounded-lg h-[200px] md:h-[308px] relative bg-black/50 overflow-hidden group-hover:bg-primary/75 transition-colors duration-300`,
+          `grid place-items-center bg-cover rounded-lg h-[250px] md:h-[200px] lg:h-[308px] relative bg-black/50 overflow-hidden group-hover:bg-primary/75 transition-colors duration-300`,
           className
         )}
       >
         <Image src={background} alt={title} fill className="-z-10 object-cover" />
         <div className="flex flex-col items-center gap-6 uppercase font-medium">
-          <h3 className="text-5xl">{title}</h3>
+          <h3 className="text-[28px] tracking-[1.4px] md:text-5xl">{title}</h3>
           <div className="text-[15px] tracking-[5px] flex items-center gap-5">
             <span>View projects</span>
             <Image src={IconRightArrow} alt="Right arrow" />

@@ -11,7 +11,7 @@ export default function MobileNav() {
   return (
     <Drawer direction="top" shouldScaleBackground={true}>
       <DrawerTrigger asChild>
-        <Button variant="ghost" className="md:hidden">
+        <Button variant="ghost" size="icon" className="md:hidden">
           <Image src={IconHamburger} alt="Hamburger icon" />
         </Button>
       </DrawerTrigger>
@@ -21,7 +21,7 @@ export default function MobileNav() {
         <header className="flex justify-between items-center h-24 px-6 top-0 left-0 bg-white">
           <Logo mode="dark" />
           <DrawerClose asChild>
-            <Button variant="ghost" className="md:hidden">
+            <Button variant="ghost" size="icon" className="md:hidden">
               <Image src={IconClose} alt="Close icon" />
             </Button>
           </DrawerClose>
