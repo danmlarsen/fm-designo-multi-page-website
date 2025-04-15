@@ -1,4 +1,3 @@
-import Header from './header';
 import Logo from './logo';
 import Navigation from './navigation';
 import Socials from './socials';

@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 type TProject = {
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 };
 
 export default function DesignProjects({ projects }: { projects: TProject[] }) {

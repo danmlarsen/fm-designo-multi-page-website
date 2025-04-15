@@ -8,8 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 
-import Image from 'next/image';
-
 const contactFormSchema = z.object({
   name: z.string().min(1, "Can't be empty"),
   email: z.string().min(1, "Can't be empty").email(),
