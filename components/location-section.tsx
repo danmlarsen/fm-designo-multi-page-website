@@ -31,9 +31,9 @@ export default function LocationSection() {
           <div className="bg-muted rounded-full">
             <Image src={location.image} alt={location.heading} />
           </div>
-          <div>
+          <div className="space-y-8">
             <h3 className="text-xl font-medium uppercase tracking-[5px]">{location.heading}</h3>
-            <Button asChild>
+            <Button asChild className="bg-primary text-white">
               <Link href={location.href}>See location</Link>
             </Button>
           </div>
