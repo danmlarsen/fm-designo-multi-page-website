@@ -27,7 +27,7 @@ export default function ContactForm() {
     },
   });
 
-  async function handleSubmit(data: z.infer<typeof contactFormSchema>) {
+  async function handleSubmit() {
     await new Promise(resolve => setTimeout(resolve, 500));
     toast.success('Successfully submitted contact info');
     form.reset();
