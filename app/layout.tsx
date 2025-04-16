@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import CallToAction from './call-to-action';
+import { Toaster } from '@/components/ui/sonner';
 
 const jostSans = Jost({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
+        <Toaster />
       </body>
     </html>
   );
