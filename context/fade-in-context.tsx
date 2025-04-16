@@ -2,19 +2,28 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
+const prefersReducedMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+
 const FadeInContext = createContext<{
   seenIds: Set<string>;
   markSeen: (id: string) => void;
   isReady: boolean;
+  reduceMotion: boolean;
 }>({
   seenIds: new Set(),
   markSeen: () => {},
   isReady: false,
+  reduceMotion: false,
 });
 
 export function FadeInProvider({ children }: { children: React.ReactNode }) {
   const [seenIds, setSeenIds] = useState<Set<string>>(new Set());
   const [isReady, setIsReady] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    setReduceMotion(prefersReducedMotion());
+  }, []);
 
   useEffect(() => {
     const stored = sessionStorage.getItem('fadeInSeen');
@@ -46,7 +55,7 @@ export function FadeInProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
-  return <FadeInContext.Provider value={{ seenIds, markSeen, isReady }}>{children}</FadeInContext.Provider>;
+  return <FadeInContext.Provider value={{ seenIds, markSeen, isReady, reduceMotion }}>{children}</FadeInContext.Provider>;
 }
 
 export const useFadeIn = () => useContext(FadeInContext);

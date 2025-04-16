@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function FadeInOnScroll({ id, children }: { id: string; children: React.ReactNode }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { seenIds, markSeen, isReady } = useFadeIn();
+  const { seenIds, markSeen, isReady, reduceMotion } = useFadeIn();
 
   const hasSeen = seenIds.has(id);
 
@@ -18,13 +18,13 @@ export default function FadeInOnScroll({ id, children }: { id: string; children:
   }, [inView, hasSeen, markSeen, isReady, id]);
 
   if (!isReady) {
-    return <div ref={ref}>{children}</div>;
+    return null;
   }
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: hasSeen ? 1 : 0, y: hasSeen ? 0 : 30 }}
+      initial={reduceMotion || hasSeen ? false : { opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
