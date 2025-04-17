@@ -21,18 +21,18 @@ export default function HomePage() {
       />
       <div className="space-y-40">
         <div className="md:px-10">
-          <FadeInOnScroll id="hero-award-winning">
-            <HeroAwardWinning />
-          </FadeInOnScroll>
+          {/* <FadeInOnScroll id="hero-award-winning"> */}
+          <HeroAwardWinning />
+          {/* </FadeInOnScroll> */}
         </div>
         <div className="space-y-40 px-6 md:px-10">
-          <FadeInOnScroll id="designs">
-            <Designs />
-          </FadeInOnScroll>
+          {/* <FadeInOnScroll id="designs"> */}
+          <Designs />
+          {/* </FadeInOnScroll> */}
 
-          <FadeInOnScroll id="bulletpoint-illustrations">
-            <BulletpointIllustrations />
-          </FadeInOnScroll>
+          {/* <FadeInOnScroll id="bulletpoint-illustrations"> */}
+          <BulletpointIllustrations />
+          {/* </FadeInOnScroll> */}
         </div>
       </div>
     </>

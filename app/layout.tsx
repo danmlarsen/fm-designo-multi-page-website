@@ -35,11 +35,11 @@ export default function RootLayout({
               <main>{children}</main>
             </div>
             <div className="mt-40">
-              <FadeInOnScroll id="cta">
-                <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
-                  <CallToAction />
-                </div>
-              </FadeInOnScroll>
+              {/* <FadeInOnScroll id="cta"> */}
+              <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
+                <CallToAction />
+              </div>
+              {/* </FadeInOnScroll> */}
               <div className="bg-foreground -mt-20 pt-36 pb-16">
                 <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
                   <Footer />
