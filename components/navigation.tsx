@@ -19,10 +19,11 @@ const pages = [
 
 export default function Navigation({
   className,
+  label = "Navigation",
   ...props
-}: React.ComponentProps<"ul">) {
+}: React.ComponentProps<"ul"> & { label?: string }) {
   return (
-    <nav>
+    <nav aria-label={label}>
       <ul
         className={cn(
           "flex flex-col items-center gap-10 text-sm tracking-wider uppercase md:flex-row",

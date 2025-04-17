@@ -4,7 +4,7 @@ import HeroAwardWinning from "./hero-award-winning";
 
 import SvgLeaf from "@/assets/shared/desktop/bg-pattern-leaf.svg";
 import BulletpointIllustrations from "./bulletpoint-illustrations";
-import FadeInOnScroll from "@/components/ui/fade-in-on-scroll";
+// import FadeInOnScroll from "@/components/ui/fade-in-on-scroll";
 
 export default function HomePage() {
   return (

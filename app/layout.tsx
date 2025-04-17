@@ -7,7 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import CallToAction from "./call-to-action";
-import FadeInOnScroll from "@/components/ui/fade-in-on-scroll";
+// import FadeInOnScroll from "@/components/ui/fade-in-on-scroll";
 
 const jostSans = Jost({
   subsets: ["latin"],

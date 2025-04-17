@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex justify-center border-b border-white/10 py-8 md:border-none">
           <Logo mode="light" />
         </div>
-        <Navigation className="pt-8" />
+        <Navigation className="pt-8" label="Footer navigation" />
       </div>
 
       <div className="grid justify-items-center gap-10 pt-8 text-center text-white/50 md:grid-cols-3 md:justify-items-normal md:text-left">
