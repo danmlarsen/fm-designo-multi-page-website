@@ -1,29 +1,39 @@
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 
 const pages = [
   {
-    title: 'Our company',
-    href: '/about',
+    title: "Our company",
+    href: "/about",
   },
   {
-    title: 'Locations',
-    href: '/locations',
+    title: "Locations",
+    href: "/locations",
   },
   {
-    title: 'Contact',
-    href: '/contact',
+    title: "Contact",
+    href: "/contact",
   },
 ];
 
-export default function Navigation({ className, ...props }: React.ComponentProps<'ul'>) {
+export default function Navigation({
+  className,
+  ...props
+}: React.ComponentProps<"ul">) {
   return (
     <nav>
-      <ul className={cn('flex flex-col md:flex-row gap-10 items-center uppercase text-sm tracking-wider', className)} {...props}>
-        {pages.map(page => (
-          <li key={page.href} className="relative group">
+      <ul
+        className={cn(
+          "flex flex-col items-center gap-10 text-sm tracking-wider uppercase md:flex-row",
+          className,
+        )}
+        {...props}
+      >
+        {pages.map((page) => (
+          <li key={page.href} className="group relative">
             <Link href={page.href}>{page.title}</Link>
-            <div className="h-[1px] w-full absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 bg-current transition-opacity duration-300" />
+            <div className="absolute right-0 bottom-0 left-0 h-[1px] w-full bg-current opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </li>
         ))}
       </ul>

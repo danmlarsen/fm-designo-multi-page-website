@@ -1,11 +1,20 @@
-import { cn } from '@/lib/utils';
-import Logo from './logo';
-import Navigation from './navigation';
-import MobileNav from './mobile-nav';
+import { cn } from "@/lib/utils";
+import Logo from "./logo";
+import Navigation from "./navigation";
+import MobileNav from "./mobile-nav";
 
-export default function Header({ className, mode = 'dark' }: React.ComponentProps<'header'> & { mode?: 'dark' | 'light' }) {
+export default function Header({
+  className,
+  mode = "dark",
+}: React.ComponentProps<"header"> & { mode?: "dark" | "light" }) {
   return (
-    <header className={cn('flex justify-between items-center', className, mode === 'light' && 'text-white')}>
+    <header
+      className={cn(
+        "flex items-center justify-between",
+        className,
+        mode === "light" && "text-white",
+      )}
+    >
       <Logo mode={mode} />
       <div className="hidden md:block">
         <Navigation />

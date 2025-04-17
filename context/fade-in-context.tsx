@@ -1,8 +1,10 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react";
 
-const prefersReducedMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+const prefersReducedMotion = () =>
+  typeof window !== "undefined" &&
+  window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
 const FadeInContext = createContext<{
   seenIds: Set<string>;
@@ -26,7 +28,7 @@ export function FadeInProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    const stored = sessionStorage.getItem('fadeInSeen');
+    const stored = sessionStorage.getItem("fadeInSeen");
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
@@ -34,7 +36,7 @@ export function FadeInProvider({ children }: { children: React.ReactNode }) {
           setSeenIds(new Set(parsed));
         }
       } catch (err) {
-        console.error('Failed to parse fadeInSeen from sessionStorage', err);
+        console.error("Failed to parse fadeInSeen from sessionStorage", err);
       }
     }
     setIsReady(true);
@@ -42,12 +44,12 @@ export function FadeInProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (isReady) {
-      sessionStorage.setItem('fadeInSeen', JSON.stringify([...seenIds]));
+      sessionStorage.setItem("fadeInSeen", JSON.stringify([...seenIds]));
     }
   }, [seenIds, isReady]);
 
   const markSeen = (id: string) => {
-    setSeenIds(prev => {
+    setSeenIds((prev) => {
       if (prev.has(id)) return prev;
       const updated = new Set(prev);
       updated.add(id);
@@ -55,7 +57,13 @@ export function FadeInProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
-  return <FadeInContext.Provider value={{ seenIds, markSeen, isReady, reduceMotion }}>{children}</FadeInContext.Provider>;
+  return (
+    <FadeInContext.Provider
+      value={{ seenIds, markSeen, isReady, reduceMotion }}
+    >
+      {children}
+    </FadeInContext.Provider>
+  );
 }
 
 export const useFadeIn = () => useContext(FadeInContext);

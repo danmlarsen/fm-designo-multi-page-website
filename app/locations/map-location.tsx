@@ -1,12 +1,18 @@
-'use client';
+"use client";
 
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import 'leaflet-defaulticon-compatibility';
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import "leaflet-defaulticon-compatibility";
 
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-export default function MapLocation({ coords, title }: { coords: { lat: number; lng: number }; title: string }) {
+export default function MapLocation({
+  coords,
+  title,
+}: {
+  coords: { lat: number; lng: number };
+  title: string;
+}) {
   const { lat, lng } = coords;
 
   return (
@@ -16,7 +22,7 @@ export default function MapLocation({ coords, title }: { coords: { lat: number; 
       zoomControl={false}
       dragging={false}
       scrollWheelZoom={false}
-      style={{ height: '326px', width: '100%', zIndex: '10' }}
+      style={{ height: "20.375rem", width: "100%", zIndex: "10" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

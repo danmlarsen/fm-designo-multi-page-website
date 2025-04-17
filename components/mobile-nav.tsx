@@ -1,16 +1,21 @@
-'use client';
+"use client";
 
-import Navigation from './navigation';
-import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from './ui/drawer';
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
-import IconHamburger from '@/assets/shared/mobile/icon-hamburger.svg';
-import IconClose from '@/assets/shared/mobile/icon-close.svg';
-import Image from 'next/image';
-import { Button } from './ui/button';
-import Logo from './logo';
-
-import { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTitle,
+  DrawerTrigger,
+} from "./ui/drawer";
+import Navigation from "./navigation";
+import IconHamburger from "@/assets/shared/mobile/icon-hamburger.svg";
+import IconClose from "@/assets/shared/mobile/icon-close.svg";
+import { Button } from "./ui/button";
+import Logo from "./logo";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,16 +30,21 @@ export default function MobileNav() {
   }, [pathname]);
 
   return (
-    <Drawer direction="top" shouldScaleBackground={true} open={isOpen} onOpenChange={open => setIsOpen(open)}>
+    <Drawer
+      direction="top"
+      shouldScaleBackground={true}
+      open={isOpen}
+      onOpenChange={(open) => setIsOpen(open)}
+    >
       <DrawerTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
           <Image src={IconHamburger} alt="Hamburger icon" />
         </Button>
       </DrawerTrigger>
 
-      <DrawerContent className=" border-none data-[vaul-drawer-direction=top]:rounded-b-none">
+      <DrawerContent className="border-none data-[vaul-drawer-direction=top]:rounded-b-none">
         <DrawerTitle hidden={true}>Mobile Navigation</DrawerTitle>
-        <header className="flex justify-between items-center h-24 px-6 top-0 left-0 bg-white">
+        <header className="top-0 left-0 flex h-24 items-center justify-between bg-white px-6">
           <Logo mode="dark" />
           <DrawerClose asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -42,8 +52,8 @@ export default function MobileNav() {
             </Button>
           </DrawerClose>
         </header>
-        <div className="bg-black text-white px-6 py-12">
-          <Navigation className="gap-8 text-2xl items-start" />
+        <div className="bg-black px-6 py-12 text-white">
+          <Navigation className="items-start gap-8 text-2xl" />
         </div>
       </DrawerContent>
     </Drawer>

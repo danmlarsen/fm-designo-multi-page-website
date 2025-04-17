@@ -1,13 +1,20 @@
-'use client';
+"use client";
 
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from 'sonner';
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Can't be empty"),
@@ -20,16 +27,16 @@ export default function ContactForm() {
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
     },
   });
 
   async function handleSubmit() {
-    await new Promise(resolve => setTimeout(resolve, 500));
-    toast.success('Successfully submitted contact info');
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    toast.success("Successfully submitted contact info");
     form.reset();
   }
 
@@ -46,7 +53,7 @@ export default function ContactForm() {
                   <div className="relative">
                     <Input placeholder="Name" {...field} className="peer" />
                     <FormMessage />
-                    <div className="border-b border-input absolute bottom-0 inset-x-0 w-full peer-focus-visible:border-b-[3px]" />
+                    <div className="border-input absolute inset-x-0 bottom-0 w-full border-b peer-focus-visible:border-b-[3px]" />
                   </div>
                 </FormControl>
               </FormItem>
@@ -60,9 +67,13 @@ export default function ContactForm() {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Input placeholder="Email Address" {...field} className="peer" />
+                    <Input
+                      placeholder="Email Address"
+                      {...field}
+                      className="peer"
+                    />
                     <FormMessage />
-                    <div className="border-b border-input absolute bottom-0 inset-x-0 w-full peer-focus-visible:border-b-[3px]" />
+                    <div className="border-input absolute inset-x-0 bottom-0 w-full border-b peer-focus-visible:border-b-[3px]" />
                   </div>
                 </FormControl>
               </FormItem>
@@ -78,7 +89,7 @@ export default function ContactForm() {
                   <div className="relative">
                     <Input placeholder="Phone" {...field} className="peer" />
                     <FormMessage />
-                    <div className="border-b border-input absolute bottom-0 inset-x-0 w-full peer-focus-visible:border-b-[3px]" />
+                    <div className="border-input absolute inset-x-0 bottom-0 w-full border-b peer-focus-visible:border-b-[3px]" />
                   </div>
                 </FormControl>
               </FormItem>
@@ -92,9 +103,14 @@ export default function ContactForm() {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Textarea placeholder="Your Message" {...field} rows={3} className="resize-none peer" />
+                    <Textarea
+                      placeholder="Your Message"
+                      {...field}
+                      rows={3}
+                      className="peer resize-none"
+                    />
                     <FormMessage />
-                    <div className="border-b border-input absolute bottom-0 inset-x-0 w-full peer-focus-visible:border-b-[3px]" />
+                    <div className="border-input absolute inset-x-0 bottom-0 w-full border-b peer-focus-visible:border-b-[3px]" />
                   </div>
                 </FormControl>
               </FormItem>
@@ -102,7 +118,7 @@ export default function ContactForm() {
           />
 
           <div className="flex justify-center md:justify-end">
-            <Button type="submit" className="cursor-pointer ">
+            <Button type="submit" className="cursor-pointer">
               Submit
             </Button>
           </div>

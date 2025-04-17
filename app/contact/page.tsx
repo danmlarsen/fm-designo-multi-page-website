@@ -1,6 +1,6 @@
-import LocationSection from '@/components/location-section';
-import ContactUs from './contact-us';
-import FadeInOnScroll from '@/components/ui/fade-in-on-scroll';
+import LocationSection from "@/components/location-section";
+import ContactUs from "./contact-us";
+import FadeInOnScroll from "@/components/ui/fade-in-on-scroll";
 
 export default function ContactPage() {
   return (
