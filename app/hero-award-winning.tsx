@@ -16,13 +16,14 @@ export default function HeroAwardWinning() {
           more about our services.
         </p>
         <Button asChild>
-          <Link href="/about">Learn More</Link>
+          <Link href="/about">About us</Link>
         </Button>
       </div>
       <div className="relative h-[450px] lg:absolute lg:right-0 lg:w-[500px] w-full overflow-x-clip">
         <Image
           src={ImageHeroPhone}
           alt="Image of a cell-phone"
+          priority={true}
           className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] lg:w-[600px] lg:-top-25 max-w-none"
         />
       </div>

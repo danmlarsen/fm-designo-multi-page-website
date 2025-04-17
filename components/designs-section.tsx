@@ -60,7 +60,7 @@ function DesignItem({ title, href, background, className }: React.ComponentProps
       >
         <Image src={background} alt={title} fill className="-z-10 object-cover" />
         <div className="flex flex-col items-center gap-6 uppercase font-medium">
-          <h3 className="text-[28px] tracking-[1.4px] md:text-5xl">{title}</h3>
+          <h2 className="text-[28px] tracking-[1.4px] md:text-5xl">{title}</h2>
           <div className="text-[15px] tracking-[5px] flex items-center gap-5">
             <span>View projects</span>
             <Image src={IconRightArrow} alt="Right arrow" />
