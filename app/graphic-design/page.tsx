@@ -16,7 +16,7 @@ export default function GraphicDesignPage() {
   return (
     <>
       <Image src={SvgLeaf} alt="Leaf pattern" className="absolute top-[300px] left-0  -z-50 hidden lg:block" />
-      <div className="space-y-40">
+      <div className="space-y-24 lg:space-y-40">
         <div className="md:px-10">
           <FadeInOnScroll id="design-hero-graphic">
             <DesignHero
@@ -28,7 +28,7 @@ export default function GraphicDesignPage() {
           </FadeInOnScroll>
         </div>
         <div className="px-6 md:px-10 space-y-40">
-          <FadeInOnScroll id="designs-graphic-design">
+          <FadeInOnScroll id="designs-graphic-design" threshold={0.05}>
             <DesignProjects
               projects={[
                 {

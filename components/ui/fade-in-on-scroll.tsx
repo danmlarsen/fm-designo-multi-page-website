@@ -5,8 +5,8 @@ import { motion } from 'motion/react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-export default function FadeInOnScroll({ id, children }: { id: string; children: React.ReactNode }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+export default function FadeInOnScroll({ id, children, threshold = 0.2 }: { id: string; children: React.ReactNode; threshold?: number }) {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold });
   const { seenIds, markSeen, isReady, reduceMotion } = useFadeIn();
 
   const hasSeen = seenIds.has(id);
