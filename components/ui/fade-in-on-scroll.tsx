@@ -17,7 +17,7 @@ export default function FadeInOnScroll({ id, children, threshold = 0.2 }: { id: 
     }
   }, [inView, hasSeen, markSeen, isReady, id]);
 
-  if (!isReady) {
+  if (!isReady && !reduceMotion) {
     return null;
   }
 
